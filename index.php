@@ -37,9 +37,9 @@ $dictionary = array(
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $searchword = $_POST["search"];
     $flag = 0;
-    foreach($dictionary as $word => $description) {
-        if($word == $searchword){
-            echo "Từ: " . $word . ". <br/>Nghĩa của từ: " . $description;
+    foreach($dictionary as $key => $value) {
+        if($key == $searchword){
+            echo "Từ: " . $key . ". <br/>Nghĩa của từ: " . $value;
             echo "<br/>";
             $flag = 1;
         }
